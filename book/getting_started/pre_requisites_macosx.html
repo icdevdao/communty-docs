@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction - Internet Computer Community Docs</title>
+        <title>Pre-reqs MacOSX - Internet Computer Community Docs</title>
         <!-- Custom HTML head -->
         
 
@@ -12,26 +12,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
     </head>
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
         </script>
 
@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html" class="active">Introduction</a></li><li class="chapter-item expanded "><a href="getting_started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="getting_started/pre_requisites_macosx.html"><strong aria-hidden="true">1.1.</strong> Pre-reqs MacOSX</a></li><li class="chapter-item expanded "><a href="getting_started/get_cycles.html"><strong aria-hidden="true">1.2.</strong> Get Cycles</a></li></ol></li><li class="chapter-item expanded "><a href="tutorials.html"><strong aria-hidden="true">2.</strong> Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/mdbook.html"><strong aria-hidden="true">2.1.</strong> Deploy an MdBook</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded "><a href="../getting_started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../getting_started/pre_requisites_macosx.html" class="active"><strong aria-hidden="true">1.1.</strong> Pre-reqs MacOSX</a></li><li class="chapter-item expanded "><a href="../getting_started/get_cycles.html"><strong aria-hidden="true">1.2.</strong> Get Cycles</a></li></ol></li><li class="chapter-item expanded "><a href="../tutorials.html"><strong aria-hidden="true">2.</strong> Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tutorials/mdbook.html"><strong aria-hidden="true">2.1.</strong> Deploy an MdBook</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -110,7 +110,7 @@
                     <h1 class="menu-title">Internet Computer Community Docs</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                     </div>
@@ -137,17 +137,51 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="internet-computer-developer-documentation"><a class="header" href="#internet-computer-developer-documentation">Internet Computer Developer Documentation</a></h1>
-<p>This is an experimental approach to developer focused documentation on the Internet Computer.</p>
-<p>For official Dfinity Foundation developer documentation visit <a href="https://sdk.dfinity.org/">DFINITY SDK</a></p>
-<p>To get started developing on the Internet Computer, visit the <a href="getting_started.html">Getting Started</a> guides.</p>
-<p>This documentation is designed to be a self-service documentation tool for the Internet Computer developer community. This repository is open sourced and any developer can submit a pull request to have the documentation updated.</p>
+                        <h2 id="ensure-you-have-homebrew-installed"><a class="header" href="#ensure-you-have-homebrew-installed">Ensure you have Homebrew installed</a></h2>
+<p><em>Note dfx is currently not officially supported on Macs with M1 CPUs. The SDK team is <a href="https://forum.dfinity.org/t/a-trick-way-to-run-motoko-in-mac-m1/2201/2">working on a fix</a>.</em></p>
+<p>In your terminal run:</p>
+<pre><code>brew --version
+</code></pre>
+<p>and you should see a response similar to</p>
+<pre><code>% brew --version
+Homebrew 3.2.0
+Homebrew/homebrew-core (git revision 9ea42e7407; last commit 2021-06-23)
+Homebrew/homebrew-cask (git revision 2696a93ca5; last commit 2021-06-23)
+</code></pre>
+<p>If you see a Homebrew version ; you have Homebrew installed and can proceed to the next section. If not paste the following command in your terminal to install Homebrew:</p>
+<pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)&quot;
+</code></pre>
+<h2 id="ensure-you-have-node-installed"><a class="header" href="#ensure-you-have-node-installed">Ensure you have Node installed</a></h2>
+<p>In your terminal run:</p>
+<pre><code>node --version
+</code></pre>
+<p>and you should see a response similar to</p>
+<pre><code>% node --version
+v14.17.0
+</code></pre>
+<p>If you see a Node version ; you have Node installed and can proceed to the next section. If not, use brew to install Node:</p>
+<pre><code>brew install node
+</code></pre>
+<h2 id="install-rust-optional"><a class="header" href="#install-rust-optional">Install Rust (Optional)</a></h2>
+<p>In your terminal, run:</p>
+<pre><code>$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+</code></pre>
+<p>and follow the instructions to install Rust.</p>
+<h2 id="install-the-sdk"><a class="header" href="#install-the-sdk">Install the SDK</a></h2>
+<p>In your terminal, run:</p>
+<pre><code>sh -ci &quot;$(curl -fsSL https://sdk.dfinity.org/install.sh)&quot;
+</code></pre>
+<h2 id="get-cycles-for-network-deployments"><a class="header" href="#get-cycles-for-network-deployments">Get Cycles (for Network Deployments)</a></h2>
+<p>Now that you've successfully installed the SDK follow the steps to <a href="getting_started/get_cycles.html">get cycles</a></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="next" href="getting_started.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="prev" href="../getting_started.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../getting_started/get_cycles.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -156,7 +190,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="next" href="getting_started.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="prev" href="../getting_started.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../getting_started/get_cycles.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -166,12 +203,12 @@
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
     </body>

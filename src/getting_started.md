@@ -1,0 +1,1 @@
+This section will serve as a hands-on guide for how to get your development environment ready for deploying to the Internet Computer.
