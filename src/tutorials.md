@@ -1,0 +1,1 @@
+This section will serve as a hands-on guide for how to do specific tasks on the Internet Computer.
