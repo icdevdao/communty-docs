@@ -106,7 +106,7 @@ You can also view your wallet canister web UI by putting your canister id in the
 If you ever run low on cycles you can always top up your cycles balance with `dfx`:
 
 ```
-% dfx ledger --network ic top-up ad6mp-3aaaa-aaaah-qacya-cai
+% dfx ledger --network ic top-up --amount 0.5 ad6mp-3aaaa-aaaah-qacya-cai
 Transfer sent at BlockHeight: 239474
 Canister was topped up!
 % dfx wallet --network ic balance
